@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Are We Snowboarding Today?</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <nav>
+        <ul id="nav">
+            <a href="#temp">Temperature</a>
+            <a href="#snow-level">Snow Levels</a> 
+        </ul>
+    </nav>
+    <body>
+        <script src="index.js"></script>
+        <img src="https://facts.net/wp-content/uploads/2023/05/man-snowboarding-730x487.jpeg
+        " alt="snowboarder">
+        <div class="container">
+            <h1>Are We Snowboarding Today?</h1>
+
+            <input type="text"id="location" placeholder="Enter mountain or zip code">
+                <button
+                    onclick="checkSnow()">Check now
+                </button>
+                <button 
+                    onclick="reset()">Reset
+                </button>
+                    
+            <p id="result">Check conditions...</p>
+                <p id="snow-level"></p>
+                <p id="temperature"></p>
+        </div>
+        <script src="index.js"></script>
+        
+    </body>
+</html>
+
