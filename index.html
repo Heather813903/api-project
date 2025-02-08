@@ -9,27 +9,25 @@
     <nav>
         <ul id="nav">
             <a href="#temp">Temperature</a>
-            <a href="#snow-level">Snow Levels</a> 
+            <a href="#snow-fall">Snow Fall</a> 
         </ul>
     </nav>
     <body>
-        <script src="index.js"></script>
         <img src="https://facts.net/wp-content/uploads/2023/05/man-snowboarding-730x487.jpeg
         " alt="snowboarder">
         <div class="container">
             <h1>Are We Snowboarding Today?</h1>
 
             <input type="text"id="location" placeholder="Enter mountain or zip code">
-                <button
-                    onclick="checkSnow()">Check now
-                </button>
-                <button 
-                    onclick="reset()">Reset
-                </button>
+                <button id="checkButton">Check snow</button>
+                <button id="checkTemperatureButton">Check Temperature</button>
+                <button id="resetButton">Reset</button> 
+
                     
             <p id="result">Check conditions...</p>
-                <p id="snow-level"></p>
-                <p id="temperature"></p>
+            <p id="snow-fall"></p>
+            <p id="temperature"></p>
+        
         </div>
         <script src="index.js"></script>
         
