@@ -1,5 +1,14 @@
 /*standard desktop*/
+#location {
+    position:relative;
+    z-index: 10;
 
+}
+#nav ul{
+    position: relative;
+    z-index: 1;
+
+}
 #nav {
     display: flex;
     flex-wrap: wrap;
@@ -35,3 +44,19 @@ button{
     color:red;
 }
 
+.good {
+    color:green;
+    font-weight: bold;
+}
+.not-good {
+    color:red;
+    font-weight: bold;
+}
+/*tablet*/
+@media (max-width: 800px) {
+
+}
+/*mobile*/
+@media (max-width: 500px){
+    
+}
