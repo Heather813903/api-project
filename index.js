@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("checkButton").addEventListener("click", checkSnowDepth);
     document.getElementById("checkTemperatureButton").addEventListener("click", checkTemperature);
     document.getElementById("resetButton").addEventListener("click", reset);
+    document.getElementById("nav").addEventListener("click", function() {
+        document.getElementById("location").focus();
+    })
 });
 
 
@@ -41,12 +44,10 @@ try {
 
     const snowDepth = data.hourly.snow_depth[0];
     const temperature = data.hourly.temperature_2m[0];
-    
-    if (temperatureElement > 30) {
-        resultElement.textContent = "The temperature is above ideal conditions"
-    }else{snowDepthElement.textContent = `Snow Depth: ${snowDepth} inches`;
-          temperatureElement.textContent = `Temperature: ${temperature} \u00B0F`;
-          resultElement.textContent = "";  
+        if (temperature > 30) {
+        resultElement.innerHTML = `<span class="not-good">Conditions are not good<br>Temperature:${temperature} \u00B0F</span`;
+    }else{snowDepthElement.innerHTML = `<span class="good">Go grab your gear!<br>Snow Depth: ${snowDepth} inches<br>Temperature: ${temperature} \u00B0F`;
+          resultElement.textContent = ""; 
     }
 
 }catch (error) {
